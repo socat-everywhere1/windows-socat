@@ -1,0 +1,48 @@
+{
+    "name": "node-sstap",
+    "version": "1.0.0",
+    "description": "native module that openvpn tun for nodejs.",
+    "main": "index.js",
+    "scripts": {
+        "build": ".\\node_modules\\.bin\\tsc --p tsconfig.json",
+        "compile": "node-gyp rebuild --verbose",
+        "cia32":"node-gyp clean configure build --verbose --arch=ia32",
+        "package": ".\\node_modules\\.bin\\pkg output\\test.js --targets node8-win-x64 -o .\\shadowvpn.exe",
+        "packageia32": ".\\node_modules\\.bin\\pkg output\\test.js --targets node8-win-x86 -o .\\shadowvpn-x86.exe"
+    },
+    "keywords": [
+        "nodejs",
+        "shadowsocks",
+        "tap",
+        "tun",
+        "openvpn",
+        "sstap"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Srar/node-tap.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Srar/node-tap/issues"
+    },
+    "homepage": "https://github.com/Srar/node-tap/blob/master/README.md",
+    "author": "Srar",
+    "license": "ISC",
+    "dependencies": {
+        "@types/node": "^8.10.50",
+        "cap": "^0.2.0",
+        "iconv-lite": "^0.4.19",
+        "ip6": "^0.1.5",
+        "nan": "^2.7.0",
+        "node-gyp": "^3.6.2",
+        "optimist": "^0.6.1",
+        "pkg": "^4.3.0",
+        "raw-socket": "^1.5.2",
+        "ts-node": "^8.3.0",
+        "typescript": "^3.5.3" 
+    },
+    "gypfile": true,
+    "devDependencies": {
+        "tslint": "^5.10.0"
+    }
+}
